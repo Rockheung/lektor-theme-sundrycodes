@@ -15,18 +15,18 @@
   {{ this.body }}
 
   {% if site.posts != empty %}
-    <h2 class="post-list-heading">{{ this.list_title | default: "Posts" }}</h2>
+    <h2 class="post-list-heading">{{ this.list_title | default("Posts") }}</h2>
     <div class="post-list">
       {% for post in site.posts %}
       <article id="{{ post.slug }}" class="hentry" >
         <header class="entry-header page-header">
           <h2 class="entry-title">
-            <a href="{{ post.url | relative_url }}" title="{{ post.title }}" rel="bookmark">
+            <a href="{{ post.url|url }}" title="{{ post.title }}" rel="bookmark">
               {{ post.title }}
             </a>
         <br>
         <small class="entry-info pull-right">
-          <time class="published" datetime="{{ post.date | date: "%b %-d, %Y" }}" pubdate="pubdate">{{ post.date | date: "%b %-d, %Y" }}</time>
+          <time class="published" datetime="{{ post.date | datetimeformat('medium') }}" pubdate="pubdate">{{ post.date | datetimeformat('medium') }}</time>
           {% if post.categories.size > 0 %}
           <br>
           in
@@ -42,10 +42,10 @@
         </header>
         <div class="entry-body">
           <div class="entry-content lead">
-            {{ post.excerpt | truncatewords: 55 }}
+            {{ post.excerpt|truncate(55) }}
           </div>
           <p class="continue-reading">
-            <a href="{{ post.url | relative_url }}"
+            <a href="{{ post.url|url }}"
                rel="bookmark">
               Continue reading
             </a>
@@ -71,7 +71,7 @@
       {% endfor %}
     </div>
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml"|url }}">via RSS</a></p>
   {% endif %}
 
 </div>

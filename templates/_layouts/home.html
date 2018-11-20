@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="home">
+  {% if page.title %}
+    <h1 class="page-heading">{{ page.title }}</h1>
+  {% endif %}
+
+  {{ content }}
+
+  {% if site.posts != empty %}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <div class="post-list">
+      {% for post in site.posts %}
+
+        {% include previewed_post.html post = post %}
+        {% include taglist_post.html post = post %}
+
+      {% endfor %}
+    </div>
+
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+  {% endif %}
+
+</div>

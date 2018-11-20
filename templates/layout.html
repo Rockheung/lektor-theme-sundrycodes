@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>{% block title %}Welcome{% endblock %} — SundryCodes</title>
+    <link rel="stylesheet" href="{{ '/static/gen/style.css'|asseturl }}">
+    <script type=text/javascript src="{{ '/static/gen/app.js'|asseturl }}" charset="utf-8"></script>
+    {% include '/parts/head.html' %}
+  </head>
+  <body>
+    {% include '/parts/plex.html' %}
+
+    <div class="wrapper">
+      {% include '/parts/sidebar.html' %}
+      <div id="content">
+        {% include '/parts/header.html' %}
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-11 col-xs-push-1 col-sm-10 col-sm-push-1 col-md-8 col-md-push-2 col-lg-6 col-lg-push-3">
+              {% include '/parts/breadcrumbs.html' %}
+              <div class="home">
+                {% raw %}
+                {% if page.title %}
+                  <h1 class="page-heading">{{ page.title }}</h1>
+                {% endif %}
+
+                {{ content }}
+
+                {% if site.posts != empty %}
+                  <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+                  <div class="post-list">
+                    {% for post in site.posts %}
+
+                      {% include previewed_post.html post = post %}
+                      {% include taglist_post.html post = post %}
+
+                    {% endfor %}
+                  </div>
+
+                {% endif %}
+                {% endraw %}
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--
+    <header>
+      <h1>SundryCodes</h1>
+      <nav>
+        <ul class="nav navbar-nav">
+          <li{% if this._path == '/' %} class="active"{% endif
+            %}><a href="{{ '/'|url }}">Welcome</a></li>
+          {% for href, title in [
+            ['/blog', 'Blog'],
+            ['/projects', 'Projects'],
+            ['/about', 'About']
+          ] %}
+            <li{% if this.is_child_of(href) %} class="active"{% endif
+              %}><a href="{{ href|url }}">{{ title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+    -->
+    <footer>
+      &copy; Copyright 2018 by rockheung,,,.
+    </footer>
+    {% include '/parts/script.html' %}
+  </body>
+</html>

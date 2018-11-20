@@ -1,0 +1,53 @@
+<head>
+  <meta charset="utf-8">
+  <title>{% raw %}{{ site.title }} - {% if page.title %}
+      {{ page.title }}
+    {% else %}
+      {{ site.description }}
+      {% endif %}{% endraw %}</title>
+  <meta name="robots" content="follow, all">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=0">
+  <meta name="description" content="{% raw %}{{ site.description }}{% endraw %}">
+  <meta name="keywords" content="{% raw %}{{ site.posts | map: "tags" | uniq | sort | join: ", "}}{% endraw %}">
+  <meta name="author" content="Rockheung">
+  <link rel="pingback" href="/xmlrpc/">
+  <link rel="home" href="/">
+
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- D2-coding webfont -->
+  <link href="https://cdn.jsdelivr.net/gh/joungkyun/font-d2coding/d2coding.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Monofett|Zilla+Slab+Highlight:700" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+    <script src="{{ '/js/html5shiv.js'|asseturl }}></script>
+    <script src="{{ '/js/respond.min.js'|asseturl }}></script>
+  <![endif]-->
+
+  <!-- Generarted by https://www.favicon-generator.org -->
+  <link rel="shortcut icon" href="{{ '/ico/favicon.ico'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ '/ico/apple-icon-57x57.png'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ '/ico/apple-icon-60x60.png'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ '/ico/apple-icon-72x72.png'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ '/ico/apple-icon-72x72.png'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ '/ico/apple-icon-144x144.png'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ '/ico/apple-icon-120x120.png'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ '/ico/apple-icon-144x144.png'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ '/ico/apple-icon-152x152.png'|asseturl }}">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ '/ico/apple-icon-180x180.png'|asseturl }}">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ '/ico/android-icon-192x192.png'|asseturl }}">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ '/ico/favicon-32x32.png'|asseturl }}">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ '/ico/favicon-96x96.png'|asseturl }}">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ '/ico/favicon-16x16.png'|asseturl }}">
+  <link rel="manifest" href="{{ '/ico/manifest.json'|asseturl }}">
+  <meta name="msapplication-TileColor" content="#FFFFFF">
+  <meta name="msapplication-TileImage" content="{{ '/ico/ms-icon-144x144.png'|asseturl }}">
+  <meta name="theme-color" content="#FFFFFF">
+
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic|Nanum+Myeongjo" rel="stylesheet">
+
+</head>

@@ -1,0 +1,17 @@
+
+          <footer class="entry-footer">
+
+            <p class="entry-tags">
+              <span class="glyphicon glyphicon-tags"></span> <strong>Tags</strong> :
+              {% if post.tags != empty %}
+                {% for tag in post.tags | sort %}
+                  <a href="/tag/#{{ tag }}"
+                     title="Show all entries tagged by {{ tag }}"
+                     rel="tag">{{ tag }}</a>
+                {% endfor %}
+              {% else %}
+                <span>No tags</span>
+              {% endif %}
+            </p>
+
+          </footer>

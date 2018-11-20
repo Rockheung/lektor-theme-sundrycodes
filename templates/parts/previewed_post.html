@@ -1,0 +1,66 @@
+        <article id="{{ post.slug }}" class="hentry" >
+          <header class="entry-header page-header">
+            <h2 class="entry-title">
+
+              <a href="{{ post.url | relative_url }}" title="{{ post.title }}" rel="bookmark">
+                {{ post.title }}
+              </a>
+
+          <br>
+          <small class="entry-info pull-right">
+
+            <time class="published" datetime="{{ post.date | date: "%b %-d, %Y" }}" pubdate="pubdate">{{ post.date | date: "%b %-d, %Y" }}</time>
+
+            {% if post.categories.size > 0 %}
+              <br>
+              in
+              {% for category in post.categories %}
+                <a href="{{ base_url }}category/#{{ category }}"
+                   title="Show all posts in {{ category }}"
+                   rel="tag category">{{ category }}
+                 {% if forloop.last %}.{% else %}, {% endif %}</a>
+              {% endfor %}
+            {% endif %}
+          </small>
+
+            </h2>
+
+          </header>
+
+
+          <div class="entry-body">
+
+            <!--
+              {% comment %}
+              {% if post.image %}
+                <div class="entry-image">
+                <p>
+                {% if continue_reading %}
+                  <a href="{{ post.get_absolute_url }}" title="{{ post.title }}" rel="bookmark">
+                {% endif %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }}" class="img-thumbnail img-responsive" >
+                {% if continue_reading %}
+                  </a>
+                {% endif %}
+                </p>
+                </div>
+              {% endif %}
+              {% endcomment %}
+            -->
+
+            <div class="entry-content lead">
+              {{ post.excerpt | truncatewords: 55 }}
+            </div>
+
+            <p class="continue-reading">
+              <a href="{{ post.url | relative_url }}"
+                 rel="bookmark">
+                Continue reading
+              </a>
+            </p>
+
+          </div>
+
+
+ 
+       </article>

@@ -1,0 +1,441 @@
+body
+  font-family: 'Nanum Gothic', sans-serif
+  background: #FFFFFF
+  color: #2D2C4D
+  overflow-x: hidden
+  > nav img
+    margin-top: 1px
+    margin-bottom: 1px
+
+article.hentry.featured
+
+p
+  font-family: 'Nanum Gothic', sans-serif
+  font-size: 1em
+  font-weight: 300
+  line-height: 1.7em
+  color: #2D2C4D
+  &.entry-discussions
+    margin-bottom: 0px
+
+a
+  &.aps-pos
+    position: absolute
+  &.navbar-brand
+    margin: 0px
+    text-align: center
+    padding: 0px
+    height: 0px
+  &[data-toggle="collapse"]
+    position: relative
+  &[aria-expanded="false"]::before
+    content: '\e259'
+    display: block
+    position: absolute
+    right: 20px
+    font-family: 'Glyphicons Halflings'
+    font-size: 0.6em
+  &[aria-expanded="true"]::before
+    content: '\e259'
+    display: block
+    position: absolute
+    right: 20px
+    font-family: 'Glyphicons Halflings'
+    font-size: 0.6em
+    content: '\e260'
+  color: inherit
+  text-decoration: none
+  transition: all 0.3s
+  line-height: 1.7em
+  &:hover, &:focus
+    color: inherit
+    text-decoration: none
+    transition: all 0.3s
+    line-height: 1.7em
+
+nav.navbar
+  height: 34px
+  min-height: 34px
+  margin-bottom: 15px
+  border: 0px
+
+img.home-img
+  width: 32px
+  height: 32px
+  border-radius: 4px
+
+ul.breadcrumb
+  height: 32px
+  background-color: transparent
+
+.navbar-btn
+  color: #2D2C4D
+  background-color: transparent
+  width: 32px
+  height: 32px
+  text-align: center
+  padding: 0px
+  z-index: 500
+  position: fixed
+  margin: 0px
+
+.breadcrumbs
+  position: -webkit-sticky
+  position: sticky
+  margin: -15px
+  top: 0px
+  padding: 15px
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0))
+  ul
+    padding: 4px 10px
+
+.page-header
+  padding-bottom: 50px
+  margin-top: 15px
+  h2.entry-title
+    margin-top: 15px
+
+.container-fluid
+  padding: 0px
+  margin-left: auto
+  margin-right: auto
+
+.search-form .form-group
+  float: right !important
+  transition: all 0.35s
+  width: 32px
+  height: 32px
+  background-color: #FFFFFF
+  border-left: 1px solid #2D2C4D
+  input.form-control
+    padding-right: 20px
+    border: 0 none
+    background: transparent
+    box-shadow: none
+    display: block
+    height: 30px
+    &::-webkit-input-placeholder
+      display: none
+    &:-moz-placeholder
+      /* Firefox 18-
+      display: none
+    &::-moz-placeholder
+      /* Firefox 19+
+      display: none
+    &:-ms-input-placeholder
+      display: none
+  &:hover, &.hover
+    width: 220px
+    border-radius: 8px 25px 25px 8px
+  span.form-control-feedback
+    float: right !important
+    position: relative
+    top: -32px
+    right: -2px
+    z-index: 2
+    display: block
+    width: 34px
+    height: 34px
+    line-height: 34px
+    text-align: center
+    color: #2D2C4D
+
+#banner
+  display: flex
+  flex-direction: row
+  justify-content: center
+  transition: all 0.35s
+  &.active
+    margin-left: -250px
+  a
+    position: absolute
+    left: 320px
+    opacity: 0.2
+    z-index: 20
+    padding: 3px
+    margin: 15px 0 15px
+    background: #2D2C4D
+    filter: blur(1px)
+    border-radius: 4px
+    &:hover
+      -webkit-filter: blur(1px)
+      opacity: 1
+      filter: none
+      background: #2D2C4D
+
+#sidebar
+  min-width: 250px
+  max-width: 250px
+  height: 100vh
+  position: fixed
+  top: 0
+  left: 0
+  z-index: 10
+  background: #4087A6
+  color: #FFFFFF
+  transition: all 0.3s
+  ul ul a
+    padding-left: 30px !important
+  span.label
+    font-size: 1.1rem
+    font-weight: 400
+  .container
+    height: calc(100vh - 62px)
+    width: 250px
+    padding: 0
+  footer.container
+    position: absolute
+    max-height: 15px
+    top: calc(100vh - 30px)
+    bottom: 0
+    left: 0
+    z-index: 500
+    color: #FFFFFF
+  &.active
+    margin-left: -250px
+  .sidebar-search
+    min-height: 50px
+    background: #3686A0
+  .sidebar-header a
+    display: flex
+    height: 62px
+    padding: 15px
+    background: #3686A0
+    font-family: 'Monofett', 'Zilla Slab Highlight', cursive
+    font-size: 3.3em
+    letter-spacing: -0.1em
+    line-height: 32px
+    white-space: nowrap
+    justify-content: center
+    &:hover
+      font-size: 4.5em
+      letter-spacing: -0.15em
+  .tag-cloud
+    padding: 10px 10px 10px 30px
+    font-size: 1.4em
+    line-height: 1.68em
+    li
+      list-style: none
+      display: inline
+      a
+        display: inherit
+        padding: 5px !important
+        text-align: left
+        word-break: keep-all
+        border-radius: 4px
+    .tag-0
+      display: none
+    .tag-1
+      font-size: 1.11923rem
+    .tag-2
+      font-size: 1.25267rem
+    .tag-3
+      font-size: 1.40202rem
+    .tag-4
+      font-size: 1.56918rem
+    .tag-5
+      font-size: 1.75627rem
+    .tag-6
+      font-size: 1.96567rem
+  ul
+    &.components
+      padding: 15px 0
+    p
+      color: #FFFFFF
+      padding: 10px
+    li
+      a
+        padding: 10px
+        font-size: 1.1em
+        display: block
+        &:hover
+          color: #4087A6
+          background: #BFC8E0
+      &.active > a
+        color: #FFFFFF
+        background: #3686A0
+
+a[aria-expanded="true"]
+  color: #FFFFFF
+  background: #3686A0
+
+#sidebar
+  .search-form .form-group
+    width: 220px
+    border-radius: 8px 25px 25px 8px
+  ul li ul li.current
+    font-weight: bold
+
+#recentcomments li.dsq-widget-item
+  display: flex
+  flex-direction: row-reverse
+  padding: 0px
+  margin: 0px
+  float: left
+  a
+    display: none
+  p
+    text-indent: 0px
+    &.dsq-widget-meta
+      font-size: 0em
+      width: 250px
+      height: 46px
+      padding: 0px
+      a
+        width: 250px
+        height: 46px
+        display: flex
+        flex-direction: row-reverse
+        position: fixed
+        font-size: 1.1rem
+        padding: 10px 10px 10px 30px
+        color: rgba(255, 255, 255, 0)
+        overflow: hidden
+        &:hover
+          color: #4087A6
+          background: #BFC8E0
+  span.dsq-widget-comment
+    display: inherit
+    margin: 0px
+    position: absolute
+    left: 0px
+    p
+      color: #FFFFFF
+      width: 250px
+      padding: 10px 10px 10px 30px
+      margin: 0px
+      font-size: 1.1em
+
+#content
+  width: calc(100% - 250px)
+  min-height: 100vh
+  transition: all 0.3s
+  position: absolute
+  top: 0
+  right: 0
+  padding: 15px
+  background: #FFFFFF
+  &.active
+    width: 100%
+  article.hentry
+    margin-bottom: 50px
+  div.entry-body h2
+    margin: 0 0 20px
+    line-height: 1.7em
+    text-align: justify
+
+h3
+  margin: 0 0 20px
+  line-height: 1.7em
+  text-align: justify
+
+#content
+  div.entry-body
+    p
+      text-indent: -15px
+      text-align: justify
+      margin: 0 0 20px
+    img
+      width: 100%
+      height: auto
+    pre
+      background: #2D2C4D
+      color: #FFFFFF
+      margin: 0 0 20px
+    ul
+      margin: 0 0 20px
+    code, p code
+      font-family: D2Coding, 'D2 coding', 'Anonymous Pro', monospace
+    pre code
+      font-family: D2Coding, 'D2 coding', 'Anonymous Pro', monospace
+      font-size: 1.5em
+    p.continue-reading
+      display: flex
+      flex-direction: row
+      justify-content: center
+      text-align: center
+      transition: all 0.3s
+      a
+        text-indent: initial
+        display: block
+        width: 130px
+        padding: 0 5px
+        border-style: solid
+        border-radius: 4px
+        border-width: 0 1px
+        &:hover
+          width: 100%
+          font-weight: 600
+    table
+      border-collapse: collapse
+      text-align: left
+      line-height: 1.5
+      margin: 0 0 20px
+      thead th
+        padding: 10px
+        font-weight: bold
+        vertical-align: top
+        color: #369
+        border-bottom: 3px solid #036
+      tbody th
+        width: 150px
+        padding: 10px
+        font-weight: bold
+        vertical-align: top
+        border-bottom: 1px solid #ccc
+        background: #f3f6f7
+      td
+        width: 350px
+        padding: 10px
+        vertical-align: top
+        border-bottom: 1px solid #ccc
+  small.entry-info
+    font-size: 45%
+  div
+    &.search form.form-search
+      background-color: transparent
+      border: 0px
+    &.entry-body div.entry-content a
+      color: #5F4B8B
+      border-radius: 4px
+      transition: all 0.3s
+      border-left: 8px solid
+      &:hover
+        color: #FFFFFF
+        background: #5F4B8B
+
+// table
+
+@media (max-width: 768px)
+  div.breadcrumbs li
+    &.deactive
+      display: none
+    display: inherit
+  #sidebar
+    margin-left: -250px
+    .container
+      height: calc(100vh - 112px)
+    &.active
+      margin-left: 0
+  #content
+    width: 100%
+    h2.entry-title
+      font-size: 22px
+    div.entry-body
+      h3
+        font-size: 18px
+      blockquote
+        font-size: 13px
+      pre code
+        font-size: 1.14em
+    .container-fluid
+      min-width: calc(320px - calc(15px * 2))
+    &.active
+      width: calc(100% - 250px)
+      .container-fluid
+        min-width: 320px
+
+@media (max-width: 320px)
+
+// Import partials.
+@import  sundrycodes/syntax-highlighting

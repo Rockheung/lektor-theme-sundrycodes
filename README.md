@@ -1,4 +1,4 @@
-# sundrycodes
+# sundrycodes: Paused. Everything what I've beed doing is `dev` branch
 
 This is where a description of your theme goes.
 Provide usage instructions here.
